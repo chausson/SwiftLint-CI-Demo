@@ -1,10 +1,27 @@
 # This file is a template, and might need editing before it works on your project.
 # Lifted from: https://about.gitlab.com/2016/03/10/setting-up-gitlab-ci-for-ios-projects/
 language: objective-c #1
-osx_image: xcode9.2 #2
+os: osx
+osx_image: xcode9.2
 
-xcode_project: SwiftLintDemo.xcodeproj #3
-xcode_scheme: SwiftLintDemo #4
+env:
+  matrix:
+    - TEST_TYPE=iOS
+-before_install:
+ - |
+    gem install xcpretty -N --no-ri --no-rdoc
+script:
+- |
+    ./setup.sh
+    if [ "$TEST_TYPE" = iOS ]; then
+      set -o pipefail
+      xcodebuild clean test -workspace SwiftLintDemo.xcodeproj -scheme SwiftLintDemo -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.1' -enableCodeCoverage YES | xcpretty
+    fi
+after_success:
+    - sleep 5
+    - if [ "$TEST_TYPE" = iOS ] ; then
+        bash <(curl -s https://codecov.io/bash)
+      fi
 
 
 # os: osx

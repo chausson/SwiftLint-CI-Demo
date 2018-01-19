@@ -14,7 +14,6 @@
 		06AC4F4720103E2B0088035B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06AC4F4520103E2B0088035B /* LaunchScreen.storyboard */; };
 		06AC4F5220103E2C0088035B /* SwiftLintDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AC4F5120103E2C0088035B /* SwiftLintDemoTests.swift */; };
 		06AC4F65201072720088035B /* ClassDelegateProtocol .swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AC4F64201072720088035B /* ClassDelegateProtocol .swift */; };
-		CA90B69938FE18EF74D91D5A /* Pods_SwiftLintDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48E3D9EF1BF37F01D78BBE0 /* Pods_SwiftLintDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +48,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA90B69938FE18EF74D91D5A /* Pods_SwiftLintDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,12 +128,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 06AC4F5620103E2C0088035B /* Build configuration list for PBXNativeTarget "SwiftLintDemo" */;
 			buildPhases = (
-				5A15FA0DC510DA3DD69ABD42 /* [CP] Check Pods Manifest.lock */,
 				06AC4F3520103E2B0088035B /* Sources */,
 				06AC4F3620103E2B0088035B /* Frameworks */,
 				06AC4F3720103E2B0088035B /* Resources */,
-				9A89A3F387C7ED83AF78143D /* [CP] Embed Pods Frameworks */,
-				6315B5551E0807F7C62AA36B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -223,57 +218,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		5A15FA0DC510DA3DD69ABD42 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SwiftLintDemo-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6315B5551E0807F7C62AA36B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftLintDemo/Pods-SwiftLintDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9A89A3F387C7ED83AF78143D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftLintDemo/Pods-SwiftLintDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		06AC4F3520103E2B0088035B /* Sources */ = {
